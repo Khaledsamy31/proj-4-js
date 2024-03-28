@@ -1,0 +1,204 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    height: 70px;
+    background-color: black;
+    padding: 10px 0px
+}
+.headerContent{
+    display: flex; /* to put shopping cart inside ul */
+    justify-content: space-between; 
+    /* align-items: center; */
+     /*to control in a & ul content */
+}
+.headerContent .brand{
+    text-decoration: none;
+    font-size: 30px;
+}
+nav ul{
+    display: flex; /* to put singe in & singe up in oneline */
+    list-style: none;
+    
+}
+nav li a{
+    display: block; /* cuz (a) us inline element, we use display block to make it easier to control  */
+text-decoration: none;
+min-width: 80px; /* to make a space bettwen sign in & sign up */
+/* background-color: blanchedalmond; */
+padding: 0px 10px; /* to set click place at sign in & sign up*/
+ margin-left: 10px;/* to set click place at sign in & sign up*/
+ font-size:20px ;
+ margin-top: 10px;
+
+}
+.signIn{
+    margin-top: 10px;
+}
+/* ==============================FORM================================================== */
+
+.section-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    text-align: center;
+    background-color: black;
+    color: #0A58CA;
+    padding: 20px;
+}
+.section-form h2{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.section-form form input{
+    display: block;
+    width: 100%;
+    margin: 5px 0px;
+    height: 30px;
+    border: 1px solid white;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none; /* to remove out line border that appear on focus*/
+    border-radius: 5px;
+}
+.sign{
+    /* cursor: pointer; */
+    transition: 0.4s;
+    border-radius: 7px;
+}
+
+.sign:hover{
+    transition-delay: .1s;
+    color: white;
+}
+.section-form form input[type="submit"]:hover{ /* to select all input's type submit*/
+    background: #4d7cc2;
+    letter-spacing: 1px;
+}
+
+nav ul#user_info{ /*if no space bettwen ul&#user_info = call ul that take id user_info, if there space means call id user_info that existed into ul */
+display: none;
+
+}
+
+.ph::placeholder{
+    color: red;
+}
+p{
+    margin-bottom: 0px !important;
+}
+
+/* =====================PRODUCTS CARD============================ */
+.products{
+    width: 60%;
+    margin: 10px 0px;
+}
+.product_item{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 150px;
+
+
+}
+.product_item_img{
+    width: 25%;
+    margin-right: 10px;
+}
+
+.product_item_action{
+    flex: 1;    /* */
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.product_item .add_to_card{
+    display: block; /*cuz (card) us inline element, we use display block to make it easier to control */
+    margin-left: auto;
+    background-color: #2d69c4;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.product_item .add_to_card:hover{
+    background-color: #0A58CA;
+}
+
+.product_item .fav{
+    cursor: pointer;
+    display: block; /* cuz (fav) us inline element, we use display block to make it easier to control*/
+    width: 20px; /*to resize clickable place*/
+    margin-left: auto;
+}
+/* =======================CARD PRODUCTS====================== */
+.user_info{
+    display: flex;
+    flex-direction: row;
+}
+.cardIcon{ /*this is card icon */
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.shopping_card{
+    margin-left: 10px;
+}
+nav ul#user_info li .cardBadge{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    font-size: 13px;
+    top: 7px;
+    right: 200px;
+    display: none;
+}
+
+/* ==========================CARDS PRODUCTS PAGE============================ */
+.cards_products{
+    position: absolute;
+    width: 210px;
+    transform: translate(-40%, 0);
+    background-color: #2d69c4;
+    top: 70px;
+    padding: 10px;
+    border: 1px solid rgb(187, 185, 185);
+    display: none;
+}
+.cards_products a{
+    display: block;
+    color: black;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: rgb(197, 201, 197);
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgb(230, 225, 225);
+    border-radius: 10px;
+}
+.cards_products a:hover{
+    background-color: rgb(231, 238, 238);
+}
+.cards_products div p{
+    text-align: start;
+    color: white;
+    font-size: 25px;
+   
+}
